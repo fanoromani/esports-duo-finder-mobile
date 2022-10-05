@@ -6,7 +6,7 @@ import {
   Inter_700Bold,
   Inter_900Black,
 } from "@expo-google-fonts/inter";
-import { Routes } from "./src/routes/";
+import { Routes } from "./src/routes";
 import { Background } from "./src/components/Background";
 import { Loading } from "./src/components/Loading";
 
