@@ -56,7 +56,20 @@ export function Game() {
           <FlatList
             data={duos}
             keyExtractor={(item) => item.id}
-            renderItem={({ item }) => <DuoCard data={duos[0]} />}
+            renderItem={({ item }) => (
+              <DuoCard onConnect={() => {}} data={duos[0]} />
+            )}
+            horizontal
+            style={styles.containerList}
+            contentContainerStyle={[
+              duos.length > 0 ? styles.contentList : styles.emptyListContainer,
+            ]}
+            showsHorizontalScrollIndicator={false}
+            ListEmptyComponent={() => (
+              <Text style={styles.emptyListText}>
+                Não há anúncios para este jogo
+              </Text>
+            )}
           />
         </SafeAreaView>
       </Text>
